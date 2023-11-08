@@ -59123,14 +59123,15 @@ p=s?300:50
 o=s?"Up your game.":"Up your\ngame."
 n=t.F
 o=A.ue(B.V,A.a([d,new A.ba(new A.aQ(p,0,0,0),new A.dH(B.d0,i,i,A.Yo(o,A.iE(i,i,B.iA,i,i,i,i,i,"Montserrat",i,i,26,i,i,B.j,i,i,!0,i,3,i,i,i,i,i,i)),i),i)],n),B.cW)
-p=A.ad0(B.Mx,A.a([A.a76(A.dL(A.a([A.da("assets/images/emmy.png",i,80,i),B.GM,B.Lv],n),B.T,B.X),B.dd),A.a76(new A.ba(B.yo,A.dL(A.a([A.da("assets/images/newsday.png",i,90,i),B.e5,B.LC],n),B.T,B.X),i),B.eZ),A.a76(A.dL(A.a([B.GN,A.da("assets/images/news12.png",i,i,i),B.GO,B.LE],n),B.T,B.X),B.bI)],n),i,100)
-d=s?100:50
+d=s?100:20
+d=A.ad0(B.Mx,A.a([A.a76(A.dL(A.a([A.da("assets/images/emmy.png",i,80,i),B.GM,B.Lv],n),B.T,B.X),B.dd),A.a76(new A.ba(B.yo,A.dL(A.a([A.da("assets/images/newsday.png",i,90,i),B.e5,B.LC],n),B.T,B.X),i),B.eZ),A.a76(A.dL(A.a([B.GN,A.da("assets/images/news12.png",i,i,i),B.GO,B.LE],n),B.T,B.X),B.bI)],n),i,d)
+p=s?100:50
 m=s?100:50
 g=s?600:A.bG(a,i,g).w.a.a-100
 g=A.mX(i,A.hv(new A.zb(A.a6R(30),A.da("assets/images/thumbnail.png",B.hD,i,i),i),i,g),B.aq,!1,i,i,i,i,i,i,i,i,i,i,i,i,i,i,new A.a2A(),i,i,i,i)
 l=s?100:50
 k=s?100:50
-return new A.tD(!0,e,new A.uK(new A.E3(q,B.wJ,A.dL(A.a([o,B.cV,new A.ba(B.aX,p,i),B.cV,A.dL(A.a([new A.ba(new A.aQ(d,0,d,0),B.LO,i),B.cV,new A.ba(new A.aQ(m,0,m,0),B.Ly,i),g,B.cV,new A.ba(new A.aQ(l,0,0,0),B.uR,i),new A.ba(new A.aQ(k,0,k,0),B.y3,i),B.cV,A.ad0(B.h9,A.a([new A.ba(B.aX,A.dL(A.a([A.da("assets/images/presence.jpeg",B.bA,300,400),B.bq,B.DR,B.DY],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/islanders.jpeg",B.bA,300,400),B.bq,B.E0,B.DZ],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/jamie3.jpg",B.bA,300,400),B.bq,B.DP,B.DU],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/zoom.png",B.hD,300,400),B.bq,B.E2,B.DQ],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/messaging.jpeg",B.bA,300,400),B.bq,B.DX,B.DV],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/public.jpeg",B.bA,300,400),B.bq,B.DW,B.DO],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/reporting.jpeg",B.vk,300,400),B.bq,B.E1,B.E_],n),B.T,B.X),i)],n),j.r,0),A.aaO(B.DS,new A.a2B(),A.a7f(i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,B.uj,i)),B.GL,A.aaO(B.DT,new A.a2C(),A.a7f(i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,B.uj,i)),B.GK],n),B.T,B.X)],n),B.T,B.X),i),q,0.3,10,B.on,r,i),A.aaU(B.yX,!1,new A.a2D(),"Email me"),c,i)}}
+return new A.tD(!0,e,new A.uK(new A.E3(q,B.wJ,A.dL(A.a([o,B.cV,new A.ba(B.aX,d,i),B.cV,A.dL(A.a([new A.ba(new A.aQ(p,0,p,0),B.LO,i),B.cV,new A.ba(new A.aQ(m,0,m,0),B.Ly,i),g,B.cV,new A.ba(new A.aQ(l,0,0,0),B.uR,i),new A.ba(new A.aQ(k,0,k,0),B.y3,i),B.cV,A.ad0(B.h9,A.a([new A.ba(B.aX,A.dL(A.a([A.da("assets/images/presence.jpeg",B.bA,300,400),B.bq,B.DR,B.DY],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/islanders.jpeg",B.bA,300,400),B.bq,B.E0,B.DZ],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/jamie3.jpg",B.bA,300,400),B.bq,B.DP,B.DU],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/zoom.png",B.hD,300,400),B.bq,B.E2,B.DQ],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/messaging.jpeg",B.bA,300,400),B.bq,B.DX,B.DV],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/public.jpeg",B.bA,300,400),B.bq,B.DW,B.DO],n),B.T,B.X),i),new A.ba(B.aX,A.dL(A.a([A.da("assets/images/reporting.jpeg",B.vk,300,400),B.bq,B.E1,B.E_],n),B.T,B.X),i)],n),j.r,0),A.aaO(B.DS,new A.a2B(),A.a7f(i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,B.uj,i)),B.GL,A.aaO(B.DT,new A.a2C(),A.a7f(i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,i,B.uj,i)),B.GK],n),B.T,B.X)],n),B.T,B.X),i),q,0.3,10,B.on,r,i),A.aaU(B.yX,!1,new A.a2D(),"Email me"),c,i)}}
 A.a2w.prototype={
 $0(){var s=this.a,r=s.d
 r===$&&A.c()
