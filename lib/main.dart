@@ -2,6 +2,7 @@ import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:jamie/widgets/top_bar.dart';
 import 'package:jamie/widgets/web_scrollbar.dart';
+import 'package:jamie/widgets/youtube.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
@@ -203,8 +204,9 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(height: 50),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                child: Wrap(
+                  alignment: WrapAlignment.center,
+                  spacing: isWide ? 100 : 20,
                   children: [
                     DelayedDisplay(
                       delay: const Duration(milliseconds: 400),
@@ -222,26 +224,25 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                     ),
-                    if (isWide)
-                      DelayedDisplay(
-                        delay: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 50),
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                'assets/images/newsday.png',
-                                height: 90,
-                              ),
-                              const SizedBox(height: 5),
-                              const Text(
-                                'Newsday Sports',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
+                    DelayedDisplay(
+                      delay: const Duration(milliseconds: 500),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 50),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/newsday.png',
+                              height: 90,
+                            ),
+                            const SizedBox(height: 5),
+                            const Text(
+                              'Newsday Sports',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            )
+                          ],
                         ),
                       ),
+                    ),
                     DelayedDisplay(
                       delay: const Duration(milliseconds: 600),
                       child: Column(
@@ -288,6 +289,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(fontSize: 20),
                     ),
                   ),
+                  SizedBox(
+                    width:
+                        isWide ? 600 : MediaQuery.of(context).size.width - 100,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: const Youtube(),
+                    ),
+                  ),
                   const SizedBox(height: 50),
                   Padding(
                     padding: EdgeInsets.only(left: isWide ? 100 : 50),
@@ -303,7 +312,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-
                   Padding(
                     padding:
                         EdgeInsets.symmetric(horizontal: isWide ? 100 : 50),
@@ -316,9 +324,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         children: [
                           Image.asset(
-                            'assets/images/jamie1.jpg',
+                            'assets/images/presence.jpeg',
                             width: 400,
                             height: 300,
+                            fit: BoxFit.cover,
                           ),
                           const SizedBox(height: 10),
                           const Padding(
@@ -357,9 +366,10 @@ like the best do it on broadcast TV.\n\n''',
                       child: Column(
                         children: [
                           Image.asset(
-                            'assets/images/jamie2.jpg',
+                            'assets/images/islanders.jpeg',
                             width: 400,
                             height: 300,
+                            fit: BoxFit.cover,
                           ),
                           const SizedBox(height: 10),
                           const Padding(
@@ -402,6 +412,7 @@ like the best do it on broadcast TV.\n\n''',
                             'assets/images/jamie3.jpg',
                             width: 400,
                             height: 300,
+                            fit: BoxFit.cover,
                           ),
                           const SizedBox(height: 10),
                           const Padding(
@@ -442,8 +453,8 @@ like the best do it on broadcast TV.\n\n''',
                       padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: Column(
                         children: [
-                          Image.asset('assets/images/conference.jpeg',
-                              width: 400, height: 300, fit: BoxFit.fitHeight),
+                          Image.asset('assets/images/zoom.png',
+                              width: 400, height: 300, fit: BoxFit.fitWidth),
                           const SizedBox(height: 10),
                           const Padding(
                             padding: EdgeInsets.all(15),
@@ -482,10 +493,10 @@ like the best do it on broadcast TV.\n\n''',
                       child: Column(
                         children: [
                           Image.asset(
-                            'assets/images/audience.webp',
+                            'assets/images/messaging.jpeg',
                             width: 400,
                             height: 300,
-                            fit: BoxFit.fitHeight,
+                            fit: BoxFit.cover,
                           ),
                           const SizedBox(height: 10),
                           const Padding(
@@ -527,7 +538,7 @@ like the best do it on broadcast TV.\n\n''',
                             'assets/images/public.jpeg',
                             width: 400,
                             height: 300,
-                            fit: BoxFit.fitHeight,
+                            fit: BoxFit.cover,
                           ),
                           const SizedBox(height: 10),
                           const Padding(
@@ -565,13 +576,13 @@ like the best do it on broadcast TV.\n\n''',
                       padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: Column(
                         children: [
-                          Image.asset('assets/images/speech.jpeg',
+                          Image.asset('assets/images/reporting.jpeg',
                               width: 400, height: 300, fit: BoxFit.fitHeight),
                           const SizedBox(height: 10),
                           const Padding(
                             padding: EdgeInsets.all(15),
                             child: Text(
-                              'Speech Writing',
+                              'Media Training',
                               style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.w700,
@@ -584,10 +595,11 @@ like the best do it on broadcast TV.\n\n''',
                             child: SizedBox(
                               width: 400,
                               child: Text(
-                                '''Whether it’s a keynote speech or a simple company announcement, the writing is just as important as the delivery, especially if you’ve entrusted the writing itself to an associate. 
-\nI’ll show you how to take someone else’s words and make them yours by answering age-old questions (Should I write it all out, or just use bullet points?  Are index cards the way to go?  How long is too long?) to help you synthesize your message and deliver a winning speech every time.
-\nPowerPoints are often the low point in a presentation, but they don’t have to be. 
-\nLearn the strategies used by the best graphics departments in broadcast television to make your slides accentuate your speech, leaving your audience buzzing about your visual aids in addition to what you say.\n
+                                '''I’ll pass along the skills you need to excel in front of the camera.
+
+After your training, you will know how to excel when there’s a microphone or a camera thrust in your face.
+
+You don’t have to fear journalists, and instead of shying from the camera, I’ll give you the inside scoop on how to shine in the limelight, whether you’re brought on as an expert analyst or your company has some explaining to do.
 ''',
                                 style: TextStyle(
                                   fontSize: 20,
@@ -618,26 +630,7 @@ like the best do it on broadcast TV.\n\n''',
                           ),
                         ),
                       )),
-                  const SizedBox(height: 15),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        textStyle: const TextStyle(fontSize: 25)),
-                    onPressed: () => launchUrl(Uri.parse('tel:+15162403836')),
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: SizedBox(
-                        width: 350,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.phone),
-                            SizedBox(width: 10),
-                            Text('(516) 240-3836'),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+
                   const SizedBox(height: 100),
                   // Container(
                   //   child: Column(
