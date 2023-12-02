@@ -190,9 +190,9 @@ class _TopBarState extends State<TopBar> {
                       },
                       onTap: () {
                         Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (c) => const Testimonials()));
+                            context,
+                            MaterialPageRoute(
+                                builder: (c) => const Testimonials()));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -211,6 +211,80 @@ class _TopBarState extends State<TopBar> {
                             maintainState: true,
                             maintainSize: true,
                             visible: _isHovering[3],
+                            child: Container(
+                              height: 2,
+                              width: 20,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: screenSize.width / 20),
+                    InkWell(
+                      onHover: (value) {
+                        setState(() {
+                          value
+                              ? _isHovering[4] = true
+                              : _isHovering[4] = false;
+                        });
+                      },
+                      onTap: () async => await launchUrl(Uri.parse(
+                          'https://www.youtube.com/watch?v=ArcjeXFjoHw')),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            'Pro Tips',
+                            style: TextStyle(
+                                color: _isHovering[4]
+                                    ? Colors.blue[200]
+                                    : Colors.white,
+                                fontSize: 20),
+                          ),
+                          const SizedBox(height: 5),
+                          Visibility(
+                            maintainAnimation: true,
+                            maintainState: true,
+                            maintainSize: true,
+                            visible: _isHovering[4],
+                            child: Container(
+                              height: 2,
+                              width: 20,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: screenSize.width / 20),
+                    InkWell(
+                      onHover: (value) {
+                        setState(() {
+                          value
+                              ? _isHovering[5] = true
+                              : _isHovering[5] = false;
+                        });
+                      },
+                      onTap: () async => await launchUrl(Uri.parse(
+                          'https://calendly.com/jamiestuartcommunications')),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            'Consultation',
+                            style: TextStyle(
+                                color: _isHovering[5]
+                                    ? Colors.blue[200]
+                                    : Colors.white,
+                                fontSize: 20),
+                          ),
+                          const SizedBox(height: 5),
+                          Visibility(
+                            maintainAnimation: true,
+                            maintainState: true,
+                            maintainSize: true,
+                            visible: _isHovering[5],
                             child: Container(
                               height: 2,
                               width: 20,

@@ -13,6 +13,7 @@ class _YoutubeState extends State<Youtube> {
   @override
   Widget build(BuildContext context) {
     return YoutubePlayer(
+      enableFullScreenOnVerticalDrag: false,
       controller: YoutubePlayerController.fromVideoId(
         videoId: widget.id,
         autoPlay: false,

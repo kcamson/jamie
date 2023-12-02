@@ -102,7 +102,8 @@ class Testimonials extends StatelessWidget {
                         child: SizedBox(
                           width: 400,
                           child: Text(
-                            '''Jamie Stuart is a pro’s pro. For 23 years, 22 of them at News 12 Long Island, he has proven to be a terrific reporter and gifted storyteller. Well respected and genuinely liked by all, Jamie is now spreading his wings and sharing his love of journalism and broadcasting with others. I have no doubt he will be an excellent teacher - and the kind of mentor who can catapult others to success in this challenging and fascinating industry.\n\n''',
+                            '''Jamie is a spellbinding storyteller. He’s a keen observer of human nature who makes each piece come alive with flair, fine writing and wit. He will find the sparkling gem inside each assignment without fail. Jamie's work ethic and passion for getting it right is infectious. He's also a great co-worker and coach. We  just wouldn't be the same team without him! 
+\n\n''',
                             style: TextStyle(
                               fontSize: 20,
                             ),

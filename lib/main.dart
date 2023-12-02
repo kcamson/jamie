@@ -5,6 +5,7 @@ import 'package:jamie/widgets/top_bar.dart';
 import 'package:jamie/widgets/web_scrollbar.dart';
 import 'package:jamie/widgets/youtube.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 void main() {
   runApp(const MyApp());
@@ -80,15 +81,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final dataKey = GlobalKey();
 
+  bool showYT0 = false;
+  bool showYT = false;
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     _opacity = _scrollPosition < screenSize.height * 0.40
         ? _scrollPosition / (screenSize.height * 0.40)
         : 1;
-    final isWide = MediaQuery.of(context).size.width > 950;
-    print(MediaQuery.of(context).size.width);
-
+    final isWide = MediaQuery.of(context).size.width > 1430;
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -164,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
                 ListTile(
-                  leading: const Icon(Icons.account_circle),
+                  leading: const Icon(Icons.branding_watermark),
                   title: const Text('Testimonials'),
                   onTap: () {
                     Navigator.push(
@@ -172,6 +174,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         MaterialPageRoute(
                             builder: (c) => const Testimonials()));
                   },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.tips_and_updates),
+                  title: const Text('Pro Tips'),
+                  onTap: () async => await launchUrl(
+                      Uri.parse('https://www.youtube.com/watch?v=ArcjeXFjoHw')),
+                ),
+                ListTile(
+                  leading: const Icon(Icons.person),
+                  title: const Text('Consultation'),
+                  onTap: () async => await launchUrl(
+                      Uri.parse('https://calendly.com/jamiestuartcommunications')),
                 ),
               ],
             )),
@@ -312,7 +326,17 @@ From public speaking, to on-air interviews, to remote conferences,  our partners
                         isWide ? 600 : MediaQuery.of(context).size.width - 100,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(30),
-                      child: const Youtube(id: 'dTlvfTlMhV8'),
+                      child: showYT0
+                          ? const Youtube(id: 'dTlvfTlMhV8')
+                          : VisibilityDetector(
+                              key: const Key('m-widget-key'),
+                              onVisibilityChanged: (visibilityInfo) {
+                                setState(() {
+                                  showYT0 = true;
+                                });
+                              },
+                              child: const Youtube(id: 'dTlvfTlMhV8'),
+                            ),
                     ),
                   ),
                   const SizedBox(height: 50),
@@ -497,7 +521,7 @@ I can help you perfect your skills and avoid common media traps.
                               width: 400,
                               child: Text(
                                 '''
-If I had a dime for the amount of times I’ve been on a zoom call and wondered “what the heck is the host” doing…well, let’s just say it’s a lot.
+If I had a dime for the amount of times I’ve been on a zoom call and wondered “what the heck is the host doing"… well, let’s just say it’s a lot.
 
 In this current hybrid world, you need to excel on Zoom, Teams or whatever platform your company uses. 
 
@@ -609,32 +633,43 @@ I’ll help you get there.
                       ),
                     ),
 
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: Column(mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          SizedBox(
-                            width:
-                                400,height: 300,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(0),
-                              child: const Youtube(id: 'ArcjeXFjoHw'),
-                            ),
-                                              ),
-                          
-                       const Padding(
-                            padding: EdgeInsets.all(15),
-                            child: Text(
-                              'PRO TIPS',
-                              style: TextStyle(
-                                color: Colors.blueGrey,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 25,
-                              ),
-                            ),
-                          ), ],
-                      ),
-                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.symmetric(horizontal: 50),
+                    //   child: Column(
+                    //     mainAxisAlignment: MainAxisAlignment.end,
+                    //     children: [
+                    //       SizedBox(
+                    //         width: 400,
+                    //         height: 300,
+                    //         child: ClipRRect(
+                    //           borderRadius: BorderRadius.circular(0),
+                    //           child: showYT
+                    //               ? const Youtube(id: 'ArcjeXFjoHw')
+                    //               : VisibilityDetector(
+                    //                   key: const Key('my-widget-key'),
+                    //                   onVisibilityChanged: (visibilityInfo) {
+                    //                     setState(() {
+                    //                       showYT = true;
+                    //                     });
+                    //                   },
+                    //                   child: const Youtube(id: 'ArcjeXFjoHw'),
+                    //                 ),
+                    //         ),
+                    //       ),
+                    //       const Padding(
+                    //         padding: EdgeInsets.all(15),
+                    //         child: Text(
+                    //           'PRO TIPS',
+                    //           style: TextStyle(
+                    //             color: Colors.blueGrey,
+                    //             fontWeight: FontWeight.w700,
+                    //             fontSize: 25,
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
 
 //                     // Speech Writing
 //                     Padding(
