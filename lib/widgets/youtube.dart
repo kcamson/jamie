@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class Youtube extends StatefulWidget {
-  const Youtube({super.key});
+  final String id;
+  const Youtube({super.key, required this.id});
 
   @override
   State<Youtube> createState() => _YoutubeState();
@@ -13,7 +14,7 @@ class _YoutubeState extends State<Youtube> {
   Widget build(BuildContext context) {
     return YoutubePlayer(
       controller: YoutubePlayerController.fromVideoId(
-        videoId: 'dTlvfTlMhV8',
+        videoId: widget.id,
         autoPlay: false,
         params: const YoutubePlayerParams(showFullscreenButton: true),
       ),

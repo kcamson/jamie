@@ -201,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      isWide ? 'Game changer.' : 'Game\nchanger.',
+                      isWide ? 'GAME CHANGER' : 'GAME\nCHANGER',
                       style: TextStyle(
                         color: Colors.blueGrey[100],
                         fontSize: 26,
@@ -292,11 +292,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding:
                         EdgeInsets.symmetric(horizontal: isWide ? 100 : 50),
                     child: const Text(
-                      '''How you communicate – with a potential client via email, on your company’s daily zoom meeting, in your pitch at the C-suite level boardroom, or at the annual industry conference in front of 2,000 people – can make or break you as an individual and your company at-large.'''
-                      '''\n\nBut being dynamic when you speak – clear, concise and compelling – isn’t easy, especially if there’s a bright light (or six) shining in your eyes.'''
-                      '''\n\nWith 23 years of TV experience as an anchor and reporter, I have the inside scoop to help. I have broadcast live in front of millions of people, covering everything from politics to the Super Bowl to live interviews.
-'''
-                      '''\nI know what it takes to perform under pressure, and I’ll give you the secrets – how to get over stage fright, what to do with your hands, when to take a breath, and countless more tips – to help you connect with your audience and finally reach your true potential. From media training to speech writing to executive presence, let me help elevate your game.
+                      '''Steve Jobs once said, “The most powerful person in the world is the storyteller.”
+
+So how do you communicate effectively? How can you be compelling – not boring?  Dynamic – not dull.  How do you do that in front of 50 or 500 people?  What if you’re in front of a TV camera or microphone?
+
+With 23 years of TV experience as an anchor and reporter for News 12 Long Island and Newsday, I have the inside scoop to help. I have broadcast live in front of millions of people, covering everything from politics to the Super Bowl to live interviews.
+
+I know what it takes to perform under pressure, and I’ll give you the secrets that have helped me communicate with power and clarity.
+
+I can help you connect with your audience and finally reach your true potential. 
+
+From public speaking, to on-air interviews, to remote conferences,  our partnership can be a game-changer. 
 ''',
                       style: TextStyle(fontSize: 20),
                     ),
@@ -306,7 +312,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         isWide ? 600 : MediaQuery.of(context).size.width - 100,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(30),
-                      child: const Youtube(),
+                      child: const Youtube(id: 'dTlvfTlMhV8'),
                     ),
                   ),
                   const SizedBox(height: 50),
@@ -345,7 +351,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           const Padding(
                             padding: EdgeInsets.all(15),
                             child: Text(
-                              'Executive Presence',
+                              'PERFECT YOUR PRESENCE',
                               style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.w700,
@@ -358,12 +364,14 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: SizedBox(
                               width: 400,
                               child: Text(
-                                '''Whenever you communicate – not just speaking publicly but in emails
-and social media posts - you represent your company.
-\nEverything matters - from how you stand to how far away the
-microphone is from your mouth to your hand gestures to your wardrobe.
-\nLearn the keys to commanding a zoom and commanding a room, just
-like the best do it on broadcast TV.\n\n''',
+                                '''
+No matter if you you’re representing yourself or your company, you “presence” is key.
+
+Everything matters.  How you dress…how you smile…do you smile? 
+Do you look like you have everything prepared or are you just “winging it?”   
+
+It’s the little things that add up.  
+Learn the keys to communicating like the best of the best do.\n\n''',
                                 style: TextStyle(
                                   fontSize: 20,
                                 ),
@@ -387,7 +395,7 @@ like the best do it on broadcast TV.\n\n''',
                           const Padding(
                             padding: EdgeInsets.all(15),
                             child: Text(
-                              'Image Consulting',
+                              'IMAGE IS EVERYTHING',
                               style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.w700,
@@ -400,11 +408,13 @@ like the best do it on broadcast TV.\n\n''',
                             child: SizedBox(
                               width: 400,
                               child: Text(
-                                '''How you appear matters – in public and in private meetings, too. 
-\nAnd it’s not just clothes. 
-\nSweating on-camera makes you look nervous; that’s bad for business. 
-\nFrom your wardrobe and hair, to makeup (yes, guys, if you’re appearing on-camera, you should be wearing some. Tom Cruise & Denzel Washington do it, and so should you). 
-\nLearn how to elevate your game – without changing YOU.\n\n''',
+                                '''
+You never get a second chance to make a first impression.  How you appear matters. 
+
+Some people sweat…a lot.  I can help fix that. If you’re selling yourself to a client or selling to advertisers, it’s imperative they feel comfortable with you. 
+
+I’ll give you styling tips while still making YOU feel comfortable.
+\n\n''',
                                 style: TextStyle(
                                   fontSize: 20,
                                 ),
@@ -430,7 +440,7 @@ like the best do it on broadcast TV.\n\n''',
                           const Padding(
                             padding: EdgeInsets.all(15),
                             child: Text(
-                              'Interview Prep',
+                              'ON-AIR INTERVIEWS',
                               style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.w700,
@@ -443,12 +453,14 @@ like the best do it on broadcast TV.\n\n''',
                             child: SizedBox(
                               width: 400,
                               child: Text(
-                                '''You've finally landed the big interview.
-\nBut how do you make a great first impression? How much talking should you do, and how much should you listen? How do you properly accentuate your accomplishments while deflecting the inevitable tough questions about any weaknesses on your resume?
-\nIn a hybrid world, you have to know how to ace these opportunities both virtually and in-person.
-\nYou have to tell YOUR story while listening to theirs. You have to assure them you can stand out - while fitting in with their team.
-\nNo, it isn't easy.
-\nBut I've done it, and I'll help you thrive in a high-stakes environment, giving you the best chance to reach your dream.\n
+                                '''
+Whether it’s on TV, online, or on radio, this is YOUR chance to get your point across.
+
+But how do you do it without rambling? How do you speak confidently without talking so fast you lose your train of thought?  
+
+I’ll work with you on various interview situations and help you avoid common media traps.
+
+I can help you perfect your skills and avoid common media traps.  
 ''',
                                 style: TextStyle(
                                   fontSize: 20,
@@ -471,7 +483,7 @@ like the best do it on broadcast TV.\n\n''',
                           const Padding(
                             padding: EdgeInsets.all(15),
                             child: Text(
-                              'Video Conferencing',
+                              'ZOOM/TEAMS TRAINING',
                               style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.w700,
@@ -484,11 +496,15 @@ like the best do it on broadcast TV.\n\n''',
                             child: SizedBox(
                               width: 400,
                               child: Text(
-                                '''The world has changed, and I hear it over and over again in every industry - you need to excel on Zoom, Teams or whatever platform your company uses. 
-\nSo why do so many executives get it so wrong? 
-\nLooking in the wrong place, overdoing (or underdoing) the background, sitting too far (or too close) to the camera, forgetting that silence can be your best friend…
-\nVideo conferencing is an art, and there are numerous ways to become a more dynamic presence online.
-\nI’ll teach you how.\n\n''',
+                                '''
+If I had a dime for the amount of times I’ve been on a zoom call and wondered “what the heck is the host” doing…well, let’s just say it’s a lot.
+
+In this current hybrid world, you need to excel on Zoom, Teams or whatever platform your company uses. 
+
+That means having the right background, the right camera ratio, any potential notes at the ready, etc.
+
+Video conferencing is an art. I’ll teach you.
+\n\n''',
                                 style: TextStyle(
                                   fontSize: 20,
                                 ),
@@ -556,7 +572,7 @@ like the best do it on broadcast TV.\n\n''',
                           const Padding(
                             padding: EdgeInsets.all(15),
                             child: Text(
-                              'Public Speaking',
+                              'PUBLIC SPEAKING',
                               style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontWeight: FontWeight.w700,
@@ -569,9 +585,19 @@ like the best do it on broadcast TV.\n\n''',
                             child: SizedBox(
                               width: 400,
                               child: Text(
-                                '''If you’re a forward-facing person at your company, public speaking is simply part of the job.
-\nIt can be overwhelming, and frankly, why wouldn’t it be? You’ve never been trained for it.
-\nI have, and I’ll reveal all of the skills and devices you can use to overcome your nerves and connect with your audience.\n
+                                '''
+This is a big one!  The best speakers and presenters craft messages and communicate in a way that meets the audience where they are, serves their goals and needs, and feels authentic.
+
+As someone whose job is to “speak publicly,” I get how this can be nerve wracking…and I’ve been trained for it! 
+
+I will help you communicate with charisma, clarity, and confidence! 
+
+There are ways to hone your skills and use tools you’ve never thought of to become more concise.
+
+Make your time – and theirs – count.
+
+I’ll help you get there. 
+
 ''',
                                 style: TextStyle(
                                   fontSize: 20,
@@ -580,6 +606,33 @@ like the best do it on broadcast TV.\n\n''',
                             ),
                           )
                         ],
+                      ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      child: Column(mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          SizedBox(
+                            width:
+                                400,height: 300,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(0),
+                              child: const Youtube(id: 'ArcjeXFjoHw'),
+                            ),
+                                              ),
+                          
+                       const Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Text(
+                              'PRO TIPS',
+                              style: TextStyle(
+                                color: Colors.blueGrey,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 25,
+                              ),
+                            ),
+                          ), ],
                       ),
                     ),
 
