@@ -1,5 +1,6 @@
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
+import 'package:jamie/screens/testimonials_screen.dart';
 import 'package:jamie/widgets/top_bar.dart';
 import 'package:jamie/widgets/web_scrollbar.dart';
 import 'package:jamie/widgets/youtube.dart';
@@ -85,7 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
     _opacity = _scrollPosition < screenSize.height * 0.40
         ? _scrollPosition / (screenSize.height * 0.40)
         : 1;
-    final isWide = MediaQuery.of(context).size.width > 700;
+    final isWide = MediaQuery.of(context).size.width > 950;
+    print(MediaQuery.of(context).size.width);
 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -161,6 +163,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                 ),
+                ListTile(
+                  leading: const Icon(Icons.account_circle),
+                  title: const Text('Testimonials'),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (c) => const Testimonials()));
+                  },
+                ),
               ],
             )),
       body: WebScrollbar(
@@ -189,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      isWide ? 'Up your game.' : 'Up your\ngame.',
+                      isWide ? 'Game changer.' : 'Game\nchanger.',
                       style: TextStyle(
                         color: Colors.blueGrey[100],
                         fontSize: 26,
@@ -269,7 +281,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding:
                         EdgeInsets.symmetric(horizontal: isWide ? 100 : 50),
                     child: const Text(
-                      'Nothing In Business Is More Vital Than Communication.',
+                      'Communication is the Key to Success',
                       textAlign: TextAlign.center,
                       style:
                           TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
@@ -487,47 +499,47 @@ like the best do it on broadcast TV.\n\n''',
                       ),
                     ),
 
-                    // Master Messaging
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/messaging.jpeg',
-                            width: 400,
-                            height: 300,
-                            fit: BoxFit.cover,
-                          ),
-                          const SizedBox(height: 10),
-                          const Padding(
-                            padding: EdgeInsets.all(15),
-                            child: Text(
-                              'Master Messaging',
-                              style: TextStyle(
-                                color: Colors.blueGrey,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 25,
-                              ),
-                            ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(15),
-                            child: SizedBox(
-                              width: 400,
-                              child: Text(
-                                '''The best and most important information so often gets lost in the weeds because people are not as clear and concise as they need to be. 
-\nWhat you say doesn’t matter if your audience doesn’t internalize it, and that’s as true for 1-on-1 meetings as it is for a gigantic presentation. 
-\nI’ll teach you how to cut to the chase while emphasizing the key points you need to get across – whether your target is a single, potential client or a convention center filled with thousands of them. Make your time – and theirs – count.\n
-''',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
+//                     // Master Messaging
+//                     Padding(
+//                       padding: const EdgeInsets.symmetric(horizontal: 50),
+//                       child: Column(
+//                         children: [
+//                           Image.asset(
+//                             'assets/images/messaging.jpeg',
+//                             width: 400,
+//                             height: 300,
+//                             fit: BoxFit.cover,
+//                           ),
+//                           const SizedBox(height: 10),
+//                           const Padding(
+//                             padding: EdgeInsets.all(15),
+//                             child: Text(
+//                               'Master Messaging',
+//                               style: TextStyle(
+//                                 color: Colors.blueGrey,
+//                                 fontWeight: FontWeight.w700,
+//                                 fontSize: 25,
+//                               ),
+//                             ),
+//                           ),
+//                           const Padding(
+//                             padding: EdgeInsets.all(15),
+//                             child: SizedBox(
+//                               width: 400,
+//                               child: Text(
+//                                 '''The best and most important information so often gets lost in the weeds because people are not as clear and concise as they need to be.
+// \nWhat you say doesn’t matter if your audience doesn’t internalize it, and that’s as true for 1-on-1 meetings as it is for a gigantic presentation.
+// \nI’ll teach you how to cut to the chase while emphasizing the key points you need to get across – whether your target is a single, potential client or a convention center filled with thousands of them. Make your time – and theirs – count.\n
+// ''',
+//                                 style: TextStyle(
+//                                   fontSize: 20,
+//                                 ),
+//                               ),
+//                             ),
+//                           )
+//                         ],
+//                       ),
+//                     ),
 
                     // Public Speaking
                     Padding(
@@ -571,45 +583,45 @@ like the best do it on broadcast TV.\n\n''',
                       ),
                     ),
 
-                    // Speech Writing
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: Column(
-                        children: [
-                          Image.asset('assets/images/reporting.jpeg',
-                              width: 400, height: 300, fit: BoxFit.fitHeight),
-                          const SizedBox(height: 10),
-                          const Padding(
-                            padding: EdgeInsets.all(15),
-                            child: Text(
-                              'Media Training',
-                              style: TextStyle(
-                                color: Colors.blueGrey,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 25,
-                              ),
-                            ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(15),
-                            child: SizedBox(
-                              width: 400,
-                              child: Text(
-                                '''I’ll pass along the skills you need to excel in front of the camera.
+//                     // Speech Writing
+//                     Padding(
+//                       padding: const EdgeInsets.symmetric(horizontal: 50),
+//                       child: Column(
+//                         children: [
+//                           Image.asset('assets/images/reporting.jpeg',
+//                               width: 400, height: 300, fit: BoxFit.fitHeight),
+//                           const SizedBox(height: 10),
+//                           const Padding(
+//                             padding: EdgeInsets.all(15),
+//                             child: Text(
+//                               'Media Training',
+//                               style: TextStyle(
+//                                 color: Colors.blueGrey,
+//                                 fontWeight: FontWeight.w700,
+//                                 fontSize: 25,
+//                               ),
+//                             ),
+//                           ),
+//                           const Padding(
+//                             padding: EdgeInsets.all(15),
+//                             child: SizedBox(
+//                               width: 400,
+//                               child: Text(
+//                                 '''I’ll pass along the skills you need to excel in front of the camera.
 
-After your training, you will know how to excel when there’s a microphone or a camera thrust in your face.
+// After your training, you will know how to excel when there’s a microphone or a camera thrust in your face.
 
-You don’t have to fear journalists, and instead of shying from the camera, I’ll give you the inside scoop on how to shine in the limelight, whether you’re brought on as an expert analyst or your company has some explaining to do.
-''',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
+// You don’t have to fear journalists, and instead of shying from the camera, I’ll give you the inside scoop on how to shine in the limelight, whether you’re brought on as an expert analyst or your company has some explaining to do.
+// ''',
+//                                 style: TextStyle(
+//                                   fontSize: 20,
+//                                 ),
+//                               ),
+//                             ),
+//                           )
+//                         ],
+//                       ),
+//                     ),
                   ]),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(

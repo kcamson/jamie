@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jamie/screens/testimonials_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TopBar extends StatefulWidget {
@@ -108,8 +109,8 @@ class _TopBarState extends State<TopBar> {
                               : _isHovering[1] = false;
                         });
                       },
-                      onTap: () =>
-                          Scrollable.ensureVisible(widget.dataKey.currentContext!),
+                      onTap: () => Scrollable.ensureVisible(
+                          widget.dataKey.currentContext!),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -169,6 +170,47 @@ class _TopBarState extends State<TopBar> {
                             maintainState: true,
                             maintainSize: true,
                             visible: _isHovering[2],
+                            child: Container(
+                              height: 2,
+                              width: 20,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: screenSize.width / 20),
+                    InkWell(
+                      onHover: (value) {
+                        setState(() {
+                          value
+                              ? _isHovering[3] = true
+                              : _isHovering[3] = false;
+                        });
+                      },
+                      onTap: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (c) => const Testimonials()));
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            'Testimonials',
+                            style: TextStyle(
+                                color: _isHovering[3]
+                                    ? Colors.blue[200]
+                                    : Colors.white,
+                                fontSize: 20),
+                          ),
+                          const SizedBox(height: 5),
+                          Visibility(
+                            maintainAnimation: true,
+                            maintainState: true,
+                            maintainSize: true,
+                            visible: _isHovering[3],
                             child: Container(
                               height: 2,
                               width: 20,
