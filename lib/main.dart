@@ -184,8 +184,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ListTile(
                   leading: const Icon(Icons.person),
                   title: const Text('Consultation'),
-                  onTap: () async => await launchUrl(
-                      Uri.parse('https://calendly.com/jamiestuartcommunications')),
+                  onTap: () async => await launchUrl(Uri.parse(
+                      'https://calendly.com/jamiestuartcommunications')),
                 ),
               ],
             )),
@@ -713,9 +713,9 @@ I’ll help you get there.
                   ]),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          textStyle: const TextStyle(fontSize: 25)),
-                      onPressed: () => launchUrl(
-                          Uri.parse('mailto:jamieleestuart@gmail.com')),
+                          textStyle: const TextStyle(fontSize: 17)),
+                      onPressed: () => launchUrl(Uri.parse(
+                          'mailto:jamie@jamiestuartcommunications.com')),
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: SizedBox(
@@ -725,7 +725,7 @@ I’ll help you get there.
                             children: [
                               Icon(Icons.email),
                               SizedBox(width: 10),
-                              Text('jamieleestuart@gmail.com'),
+                              Text('jamie@jamiestuartcommunications.com'),
                             ],
                           ),
                         ),
@@ -755,7 +755,7 @@ I’ll help you get there.
 
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          launchUrl(Uri.parse('mailto:jamieleestuart@gmail.com'));
+          launchUrl(Uri.parse('mailto:jamie@jamiestuartcommunications.com'));
         },
         tooltip: 'Email me',
         child: const Icon(Icons.message),

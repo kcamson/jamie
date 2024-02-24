@@ -1,6 +1,6 @@
 # jamie
 
-A new Flutter project.
+Executive Communication Coach.
 
 ## Getting Started
 
